@@ -1,2 +1,0 @@
-true,Rice,100
-false,Chicken,0
