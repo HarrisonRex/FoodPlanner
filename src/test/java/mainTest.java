@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import com.hrex.simplefoodplanner.Dish;
 
-
+@SuppressWarnings("unused")
 public class mainTest{
 
   @BeforeEach
@@ -11,9 +11,10 @@ public class mainTest{
     //before each test
   }
 
+
   @Test
   void testDish(){  // I am testing that i can make a dish
-    Dish mumSauce = new Dish();
+    Dish mumSauce = new Dish("MumSauce");
   }
 
 }
