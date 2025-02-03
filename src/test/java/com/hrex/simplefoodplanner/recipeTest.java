@@ -1,7 +1,12 @@
 package com.hrex.simplefoodplanner;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.hrex.simplefoodplanner.etc.units;
 
 @SuppressWarnings("unused")
 public class RecipeTest {
@@ -12,7 +17,8 @@ public class RecipeTest {
   @BeforeEach
   void setUpTests() {//before each test
     testRec = new Recipe("test");
-    testIng = new Ingreadient("test", 69);
+    testIng = new Ingreadient("test", 69, units.g, "Cumboard",1);
+    testRec.addIngreadient(testIng);
   }
 
 
@@ -22,23 +28,23 @@ public class RecipeTest {
   }
 
   @Test
-  void testGettersAndSetters() {
-    //assert all getters to test ob
-  }
-
-  @Test
   void testAddIng(){
-    Ingreadient tIng = new Ingreadient("test", 69);
-    testRec.addIngreadient(tIng);
+    //adding
+    testIng = new Ingreadient("testSet", 4, units.l, "Cumboard",1);
+    testRec.addIngreadient(testIng);
     //asserst the new list meets the old list + the ing
-  }
-  
-  @Test
-  void testRemoveIng(){
-    //by name
+    assertEquals("testSet", testRec.getIngreadients().get(1).getName());
+    assertEquals(4, testRec.getIngreadients().get(1).getStockAmount());
 
-    //by index
+    //remove by name
+    testRec.removeIng("test");
+    assertEquals(1, testRec.getIngreadients().size());
 
+    //remove by index
+    testRec.removeIng(0);
+    assertTrue(testRec.getIngreadients().isEmpty());
+
+    
   }
 
   @Test

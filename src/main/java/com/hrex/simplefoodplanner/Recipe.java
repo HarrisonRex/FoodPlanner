@@ -23,6 +23,18 @@ public class Recipe {
   public void addIngreadient(Ingreadient ingToAdd){
     ingreadients.add(ingToAdd);
   }
+
+  public void removeIng(int index){
+    ingreadients.remove(index);
+  }
+  public void removeIng(String item){ 
+      for(int i=0; i<ingreadients.size(); i++){
+        if (ingreadients.get(i).getName().equals(item)) {
+          ingreadients.remove(i);
+          break;
+        }
+      }
+  }
   
 
 
