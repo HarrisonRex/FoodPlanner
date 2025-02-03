@@ -2,21 +2,26 @@ package com.hrex.simplefoodplanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.time.LocalDate;
+import java.util.Calendar;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import com.hrex.simplefoodplanner.etc.units;
 
 public class IngreadientTest {
 
   private Ingreadient testIng;
+  private LocalDate willy = LocalDate.now();
 
   @BeforeEach
   void setUpTests() {//before each test
-    testIng = new Ingreadient("test", 69);
+    testIng = new Ingreadient("test", 69, units.g, "Cumboard",1);
   }
 
   @Test
   void testMakeIngreadient(){ // making a ingreadient object
-    testIng = new Ingreadient("test0", 420);
+    testIng = new Ingreadient("test0", 420, units.ml, "Fridge", willy);
   }
 
   @Test
@@ -28,7 +33,7 @@ public class IngreadientTest {
   }
   @Test
   void testToString() {
-    assertEquals("test"+","+69.0, testIng.toString());
+    assertEquals("test"+","+69.0+",g"+",Cumboard,"+willy.plusDays(1), testIng.toString());
   }
 
   
