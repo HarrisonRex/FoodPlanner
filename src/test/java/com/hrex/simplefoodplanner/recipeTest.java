@@ -7,10 +7,12 @@ import org.junit.jupiter.api.Test;
 public class RecipeTest {
 
   private Recipe testRec;
+  private Ingreadient testIng;
   
   @BeforeEach
   void setUpTests() {//before each test
     testRec = new Recipe("test");
+    testIng = new Ingreadient(true,"test", 69);
   }
 
 
@@ -20,12 +22,23 @@ public class RecipeTest {
   }
 
   @Test
+  void testGetters() {
+    //assert all getters to test ob
+  }
+
+  
+  @Test
+  void testSetters() {
+    //assert all setters to test ob
+  }
+  
+  @Test
   void testAddIng(){
-    Ingreadient tIng = new Ingreadient(false, null, 0);
+    Ingreadient tIng = new Ingreadient(true,"test", 69);
     testRec.addIngreadient(tIng);
     //asserst the new list meets the old list + the ing
   }
-
+  
   @Test
   void testRemoveIng(){
     //by name
@@ -36,6 +49,7 @@ public class RecipeTest {
 
   @Test
   void testEditRecipeIng(){
+    
 
   }
 }
