@@ -12,7 +12,7 @@ public class RecipeTest {
   @BeforeEach
   void setUpTests() {//before each test
     testRec = new Recipe("test");
-    testIng = new Ingreadient(true,"test", 69);
+    testIng = new Ingreadient("test", 69);
   }
 
 
@@ -34,7 +34,7 @@ public class RecipeTest {
   
   @Test
   void testAddIng(){
-    Ingreadient tIng = new Ingreadient(true,"test", 69);
+    Ingreadient tIng = new Ingreadient("test", 69);
     testRec.addIngreadient(tIng);
     //asserst the new list meets the old list + the ing
   }

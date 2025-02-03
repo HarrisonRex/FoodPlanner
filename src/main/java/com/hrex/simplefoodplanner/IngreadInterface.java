@@ -43,11 +43,10 @@ public class IngreadInterface {
       comLocations[i] = j;
     }
     
-    boolean inStock = Boolean.parseBoolean(line.substring(0,comLocations[0]));
     String name = line.substring(comLocations[0],comLocations[1]-1);
     double amountStock = Double.parseDouble(line.substring(comLocations[1])); 
     
-    ingsIn.add(new Ingreadient(inStock, name, amountStock));
+    ingsIn.add(new Ingreadient(name, amountStock));
   }
 
   //tsd

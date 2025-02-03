@@ -1,5 +1,7 @@
 package com.hrex.simplefoodplanner;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,17 +11,18 @@ public class IngreadientTest {
 
   @BeforeEach
   void setUpTests() {//before each test
-    testIng = new Ingreadient(true,"test", 69);
+    testIng = new Ingreadient("test", 69);
   }
 
   @Test
   void testMakeIngreadient(){ // making a ingreadient object
-    testIng = new Ingreadient(true,"test0", 420);
+    testIng = new Ingreadient("test0", 420);
   }
 
   @Test
   void testGetters() {
-    //assert all getters to test ob
+    assertEquals("test", testIng.getName());
+    assertEquals(420, testIng.getStockAmount());
   }
 
   

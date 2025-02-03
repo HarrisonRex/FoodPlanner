@@ -1,37 +1,29 @@
 package com.hrex.simplefoodplanner;
 public class Ingreadient {
-	private boolean inStock;
 	private String name;
-	private double amountStock;
+	private double stockAmount;
 	
-	public Ingreadient(boolean inStock, String name, double amountStock){
-		this.inStock = false;
+	public Ingreadient(String name, double amountStock){
 		this.name = name;
-		this.amountStock = amountStock;
+		this.stockAmount = amountStock;
 	}
 	
-	public void set(boolean inStock) {
-		this.inStock = inStock;
-	}
 	public void setName(String nName) {
 		this.name = nName;
 	}
-	public void setAmountStock(double amountStock) {
-		this.amountStock = amountStock;
+	public void setStockAmount(double amountStock) {
+		this.stockAmount = amountStock;
 	}
 	
-	public boolean getInStock() {
-		return(this.inStock);
-	}
 	public String getName() {
 		return(this.name);
 	}
-	public double getAmountStock() {
-		return(this.amountStock);
+	public double getStockAmount() {
+		return(this.stockAmount);
 	}
 	
 	public String toString() {
-		return(Boolean.toString(this.inStock) + "," + name + "," + amountStock);
+		return(name + "," + stockAmount);
 	}
 }
 	
