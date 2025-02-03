@@ -7,6 +7,7 @@ public class Recipe {
 
   public Recipe(String name){
     this.name = name;
+    this.ingreadients = new ArrayList<Ingreadient>();
   }
 
   public String getName() {
