@@ -22,16 +22,10 @@ public class RecipeTest {
   }
 
   @Test
-  void testGetters() {
+  void testGettersAndSetters() {
     //assert all getters to test ob
   }
 
-  
-  @Test
-  void testSetters() {
-    //assert all setters to test ob
-  }
-  
   @Test
   void testAddIng(){
     Ingreadient tIng = new Ingreadient("test", 69);

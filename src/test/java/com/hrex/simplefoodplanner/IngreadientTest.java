@@ -20,19 +20,16 @@ public class IngreadientTest {
   }
 
   @Test
-  void testGetters() {
-    assertEquals("test", testIng.getName());
-    assertEquals(420, testIng.getStockAmount());
+  void testGettersAndSetters() {
+    testIng.setName("testSet");
+    testIng.setStockAmount(4);
+    assertEquals("testSet", testIng.getName());
+    assertEquals(4, testIng.getStockAmount());
+  }
+  @Test
+  void testToString() {
+    assertEquals("test"+","+69.0, testIng.toString());
   }
 
   
-  @Test
-  void testSetters() {
-    //assert all setters to test ob
-  }
-
-  @Test
-  void testToString() {
-    //asserst to the test ob
-  }
 }
