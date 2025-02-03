@@ -1,11 +1,11 @@
+package com.hrex.simplefoodplanner;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.hrex.simplefoodplanner.Dish;
-
 @SuppressWarnings("unused")
-public class mainTest{
-
+public class MainTest {
+  
   @BeforeEach
   void setUpTests() {
     //before each test
@@ -17,4 +17,8 @@ public class mainTest{
     Dish mumSauce = new Dish("MumSauce");
   }
 
+  @Test
+  void testMain() {
+
+  }
 }
