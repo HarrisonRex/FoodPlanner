@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IngreadInterface {
+public class IngreadientInterface {
 
 	private static ArrayList<Ingreadient> ingsIn = new ArrayList<Ingreadient>();
 
