@@ -18,14 +18,14 @@ public class Ingreadient{
 		this.stockAmount = amountStock;
 		this.unitType = unit;
 		this.storageLocation = location;
-		setNewSellBy(daysToOff);
+		setSellBy(daysToOff);
 	}
 	public Ingreadient(String name, double amountStock, units unit, String location, LocalDate dayOff){
 		this.name = name;
 		this.stockAmount = amountStock;
 		this.unitType = unit;
 		this.storageLocation = location;
-		setNewSellBy(dayOff);
+		setSellBy(dayOff);
 	}
 	
 
@@ -42,11 +42,11 @@ public class Ingreadient{
 	public void setStorageLocation(String storageLocation){
 		this.storageLocation = storageLocation;
 	}
-	public void setNewSellBy(int daysToOff){ //to add days to the sellby
+	public void setSellBy(int daysToOff){ //to add days to the sellby
 		LocalDate now = LocalDate.now();
 		this.sellBy = now.plusDays(daysToOff);
 	}
-	public void setNewSellBy(LocalDate date){ //to set the date by date object
+	public void setSellBy(LocalDate date){ //to set the date by date object
 		this.sellBy = date;
 	}
 

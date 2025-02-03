@@ -26,10 +26,18 @@ public class IngreadientTest {
 
   @Test
   void testGettersAndSetters() {
+    
+    LocalDate testDate = LocalDate.of(2002, 12, 8);
+
     testIng.setName("testSet");
     testIng.setStockAmount(4);
+    testIng.setUnitType(units.l);
+    testIng.setStorageLocation("FishTank");
+    testIng.setSellBy(testDate);
     assertEquals("testSet", testIng.getName());
     assertEquals(4, testIng.getStockAmount());
+    assertEquals(units.l, testIng.getUnit());
+    assertEquals("FishTank", testIng.getLocation());
   }
   @Test
   void testToString() {
