@@ -14,12 +14,14 @@ import java.util.List;
 public class IngreadientInterface {
 
 	private static ArrayList<Ingreadient> ingsIn = new ArrayList<Ingreadient>();
+  private static String pathFile = "src\\main\\resources\\ingredients.txt";
 
 
 //Loads the ingreadients from file
   public static void loadIngreads() {
+    
     try {
-      File fileI = new File("src\\main\\resources\\ingredients.txt");
+      File fileI = new File(pathFile);
       Scanner sc = new Scanner(fileI);
       while (sc.hasNextLine()) {
         String data = sc.nextLine();
