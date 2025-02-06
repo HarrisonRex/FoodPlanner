@@ -11,8 +11,6 @@ public class Ingreadient{
 	private String storageLocation;
 	private LocalDate sellBy;
 	
-
-	
 	public Ingreadient(String name, double amountStock, units unit, String location, int daysToOff){
 		this.name = name;
 		this.stockAmount = amountStock;
@@ -28,8 +26,6 @@ public class Ingreadient{
 		setSellBy(dayOff);
 	}
 	
-
-
 	public void setName(String nName){
 		this.name = nName;
 	}
@@ -50,8 +46,6 @@ public class Ingreadient{
 		this.sellBy = date;
 	}
 
-	
-	
 	public String getName(){
 		return(this.name);
 	}
