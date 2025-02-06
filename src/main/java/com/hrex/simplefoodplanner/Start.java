@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.hrex.simplefoodplanner.interfaces.IngreadientInterface;
 import com.hrex.simplefoodplanner.interfaces.RecipeInterface;
 
+@SuppressWarnings("unused")
 public class Start {
 	public static void main(String[] args){
 
