@@ -2,14 +2,14 @@ package com.hrex.simplefoodplanner.interfaces;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.hrex.simplefoodplanner.Ingreadient;
 import com.hrex.simplefoodplanner.etc.units;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class IngreadientInterface {
 
@@ -67,4 +67,23 @@ public class IngreadientInterface {
       return ingsIn;
   }
   
+    public static void saveIngreadients(List<Ingreadient> list){
+    try{
+      File daFile = new File(pathFile);
+      if (daFile.exists()){
+        daFile.delete();
+      }
+      Ingreadient currentIngreadient;
+      FileOutputStream out = new FileOutputStream(pathFile);
+      for (int i=0; i<list.size(); i++){
+        currentIngreadient = list.get(i);
+        String outLine = currentIngreadient.toString();
+        out.write(outLine.getBytes());
+        out.write('\n');
+      }
+      out.close();
+    } catch (Exception e){
+      System.out.println("Error in saving ingreadients list: \n" + e);
+    }
+  }
 }

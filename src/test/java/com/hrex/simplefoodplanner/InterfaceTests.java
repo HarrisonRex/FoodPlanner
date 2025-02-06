@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.hrex.simplefoodplanner.etc.units;
+import com.hrex.simplefoodplanner.interfaces.IngreadientInterface;
 import com.hrex.simplefoodplanner.interfaces.RecipeInterface;
 
 public class InterfaceTests {
@@ -14,17 +15,21 @@ public class InterfaceTests {
   private Ingreadient testIng;
   
   private ArrayList<Recipe> recipeList = new ArrayList<Recipe>();
+  private ArrayList<Ingreadient> ingreadientsList = new ArrayList<Ingreadient>();
 
   //both need tests for loading too 
   //also needs to not overwite the saved recipies :)
 
-    @BeforeEach
+  @BeforeEach
   void setUpTests() {//before each test
     int amountTest = 3;
     for (int i=1;i<amountTest+1;i++){
       testRec = new Recipe("test"+i);
-      testIng = new Ingreadient("testIn"+i, i*2, units.g, "Cumboard", i);
-      testRec.addIngreadient(testIng);
+      for(int j=i;j<amountTest+1;j++){
+        testIng = new Ingreadient("testIn"+j+i, j*i, units.g, "Cumboard", i+j);
+        ingreadientsList.add(testIng);
+        testRec.addIngreadient(testIng);
+      }
       recipeList.add(testRec);
     }
   }
@@ -32,10 +37,11 @@ public class InterfaceTests {
   @Test
   void testSaveRecipes() {
     RecipeInterface.saveRecipes(recipeList);
+    //Needs an actual assersion
   }
 
   @Test
   void testSaveIngreadiants() {
-    
+    IngreadientInterface.saveIngreadients(ingreadientsList);
   }
 }

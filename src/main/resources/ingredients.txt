@@ -1,2 +1,6 @@
-true,Rice,100
-false,Chicken,0
+testIn11,1.0,g,Cumboard,2025-02-08
+testIn21,2.0,g,Cumboard,2025-02-09
+testIn31,3.0,g,Cumboard,2025-02-10
+testIn22,4.0,g,Cumboard,2025-02-10
+testIn32,6.0,g,Cumboard,2025-02-11
+testIn33,9.0,g,Cumboard,2025-02-12

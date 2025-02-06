@@ -3,14 +3,11 @@ package com.hrex.simplefoodplanner.interfaces;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 import com.hrex.simplefoodplanner.Recipe;
-import com.hrex.simplefoodplanner.etc.units;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class RecipeInterface {
 
@@ -18,7 +15,6 @@ public class RecipeInterface {
   private static String filePath = "src\\main\\resources\\recipes.txt";
 
   //Load file and read
-  
   private static void loadRecipes(){
     try {
       File fileI = new File(filePath);
@@ -33,7 +29,7 @@ public class RecipeInterface {
         e.printStackTrace();
     }
   }
-  private static int recipeFeilds = 2;
+
   //Populate the arraylist
   private static void addRecipe(String line){
     String[] comLocations = line.split(",");
