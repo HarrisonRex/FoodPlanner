@@ -18,7 +18,7 @@ public class IngreadientInterface {
 
 
 //Loads the ingreadients from file
-  public static void loadIngreads() {
+  private static void loadIngreads() {
     
     try {
       File fileI = new File(pathFile);
@@ -36,7 +36,7 @@ public class IngreadientInterface {
   
   private static int ingreadsFeilds = 5;
     //Adds the lines to the arraylist
-    public static void addIng(String line) {
+  private static void addIng(String line) {
       int[] comLocations = new int[ingreadsFeilds];
       String temp = line;
       int j = 0;
