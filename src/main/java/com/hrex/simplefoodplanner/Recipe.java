@@ -5,6 +5,11 @@ public class Recipe {
   private String name;
   private List<Ingreadient> ingreadients;
 
+
+  public String toString(){
+    return(name+","+ingreadients.toString());
+  }
+
   public Recipe(String name){
     this.name = name;
     this.ingreadients = new ArrayList<Ingreadient>();
