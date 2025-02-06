@@ -2,8 +2,8 @@ package com.hrex.simplefoodplanner;
 
 import java.util.ArrayList;
 
-import com.hrex.simplefoodplanner.interfaces.IngreadientInterface;
-import com.hrex.simplefoodplanner.interfaces.RecipeInterface;
+import com.hrex.simplefoodplanner.fileHandling.IngreadientInterface;
+import com.hrex.simplefoodplanner.fileHandling.RecipeInterface;
 
 @SuppressWarnings("unused")
 public class Start {

@@ -6,8 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.hrex.simplefoodplanner.etc.units;
-import com.hrex.simplefoodplanner.interfaces.IngreadientInterface;
-import com.hrex.simplefoodplanner.interfaces.RecipeInterface;
+import com.hrex.simplefoodplanner.fileHandling.IngreadientInterface;
+import com.hrex.simplefoodplanner.fileHandling.RecipeInterface;
 import com.hrex.simplefoodplanner.objects.Ingreadient;
 import com.hrex.simplefoodplanner.objects.Recipe;
 

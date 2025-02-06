@@ -1,4 +1,4 @@
-package com.hrex.simplefoodplanner.interfaces;
+package com.hrex.simplefoodplanner.fileHandling;
 
 import java.io.File;
 import java.io.FileNotFoundException;
