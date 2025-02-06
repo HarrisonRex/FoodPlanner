@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.hrex.simplefoodplanner.Ingreadient;
 import com.hrex.simplefoodplanner.etc.units;
+import com.hrex.simplefoodplanner.objects.Ingreadient;
 
 public class IngreadientInterface {
 

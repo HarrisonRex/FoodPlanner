@@ -1,4 +1,4 @@
-package com.hrex.simplefoodplanner;
+package com.hrex.simplefoodplanner.objects;
 
 import java.util.*;
 public class Recipe {

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.hrex.simplefoodplanner.Recipe;
+import com.hrex.simplefoodplanner.objects.Recipe;
 
 public class RecipeInterface {
 
