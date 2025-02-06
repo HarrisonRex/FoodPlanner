@@ -62,7 +62,7 @@ public class IngreadientInterface {
   }
 
   //Runner
-  public static List<Ingreadient> getIngredients(){
+  public static ArrayList<Ingreadient> getIngredients(){
       loadIngreads();
       return ingsIn;
   }

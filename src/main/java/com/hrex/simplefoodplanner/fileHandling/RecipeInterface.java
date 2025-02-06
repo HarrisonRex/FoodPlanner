@@ -41,7 +41,7 @@ public class RecipeInterface {
     //recipesList.add(new Recipe(comLocations[0],comLocations[1]));
   }
 
-  public static List<Recipe> getRecipes(){
+  public static ArrayList<Recipe> getRecipes(){
     loadRecipes();
     return recipesList;
   }
